@@ -34,30 +34,63 @@ import puppeteer from 'puppeteer'
 
 
     // }
-    await page.goto('https://www.geeksforgeeks.org/smart-questions-to-ask-in-a-job-interview/?ref=gcse')
-    await page.waitForSelector('h3')
+    // The below code was used to extracting out general info regarding interview
+    // await page.goto('https://www.geeksforgeeks.org/smart-questions-to-ask-in-a-job-interview/?ref=gcse')
+    // await page.waitForSelector('h3')
     // const questions = await page.evaluate(()=>{
     //     const styles='text-align:justify'
     //     return Array.from(document.querySelectorAll('h3'))
     //     .filter(element => element.getAttribute('style') === styles)
     //     .map(element => element.textContent);
     // })
-    const question = await page.evaluate(()=>{
-        const h3Elements = Array.from(document.querySelectorAll('h3'))
-        const pElements = Array.from(document.querySelectorAll('p')).slice(3)
-        const q_a = h3Elements.map((ele,ind)=>{
-            const answer = pElements[ind] ? pElements[ind].innerText : 'No answer found'
-            return{
-                question: ele.innerText,
-                answer: answer
-            }
+    // const question = await page.evaluate(()=>{
+    //     const h3Elements = Array.from(document.querySelectorAll('h3'))
+    //     const pElements = Array.from(document.querySelectorAll('p')).slice(3)
+    //     const q_a = h3Elements.map((ele,ind)=>{
+    //         const answer = pElements[ind] ? pElements[ind].innerText : 'No answer found'
+    //         return{
+    //             question: ele.innerText,
+    //             answer: answer
+    //         }
 
+    //     })
+    //     return q_a 
+    // })
+    await page.goto('https://www.geeksforgeeks.org/javascript-interview-questions-and-answers/?ref=header_search')
+    await page.waitForSelector('h3')
+    const qa_pairs = await page.evaluate(()=>{
+        const qa_array = []
+        const h3Elements = Array.from(document.querySelectorAll('h3'))
+        h3Elements.forEach(h3=>{
+            const qstn = h3.innerText
+            let answer = ''
+            let nextElem = h3.nextElementSibling
+            while(nextElem && (nextElem.tagName.toLowerCase() === 'p' || nextElem.tagName.toLowerCase() === 'ul' || nextElem.tagName.toLowerCase() === 'pre')){
+                if(nextElem.tagName.toLowerCase()==='p'){
+                    answer+=nextElem.innerText+ "\n"
+
+                }
+                else if(nextElem.tagName.toLowerCase() === 'ul'){
+                    const bulletPoints = Array.from(nextElem.querySelectorAll('li')).map(li => li.innerText)
+                    answer+=bulletPoints.join('\n') +"\n"
+                }
+                else if(nextElem.tagName.toLowerCase() === 'pre'){
+                    answer+=nextElem.innerText + "\n"
+                }
+                nextElem = nextElem.nextElementSibling
+                
+            }
+            qa_array.push({
+                question: qstn,
+                answer: answer.trim()
+            })
         })
-        return q_a 
+        return qa_array
+
     })
-    question.forEach((q,i)=>{
-        console.log(`${q.question}`)
-        console.log(`${q.answer}`)
+    qa_pairs.forEach((qa_pair,i)=>{
+        console.log(`${qa_pair.question}`)
+        console.log(`${qa_pair.answer}`)
         console.log('----------------')
     })
 
