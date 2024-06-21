@@ -1,5 +1,14 @@
-import puppeteer from 'puppeteer'
+// import puppeteer from 'puppeteer'
+// import fs from 'fs'
+
+const puppeteer = require('puppeteer')
+const fs = require('fs')
+const QuestionModel = require('./database/models/Questions')
+
+const {connectToDb} = require('./database/toDtbs');
+
 (async ()=>{
+    await connectToDb()
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
     // await page.goto('https://developer.chrome.com/')
@@ -58,9 +67,11 @@ import puppeteer from 'puppeteer'
     // })
     await page.goto('https://www.geeksforgeeks.org/javascript-interview-questions-and-answers/?ref=header_search')
     await page.waitForSelector('h3')
+    await page.waitForSelector('h2')
     const qa_pairs = await page.evaluate(()=>{
         const qa_array = []
         const h3Elements = Array.from(document.querySelectorAll('h3'))
+        const h2Elements = Array.from(document.querySelectorAll('h2'))
         h3Elements.forEach(h3=>{
             const qstn = h3.innerText
             let answer = ''
@@ -88,17 +99,30 @@ import puppeteer from 'puppeteer'
         return qa_array
 
     })
-    qa_pairs.forEach((qa_pair,i)=>{
-        console.log(`${qa_pair.question}`)
-        console.log(`${qa_pair.answer}`)
-        console.log('----------------')
-    })
+    // qa_pairs.forEach(async(qa_pair,i)=>{
+    //     let question = qa_pair.question;
+    //     let answer = qa_pair.answer;
+    //     const postQuestion = await QuestionModel.create({
+    //         detailedAnswer:answer,
+    //         keywords:[],
+    //         level:"",
+    //         question:question,
+    //     })
+
+    //     await postQuestion.save();
+        
+    // })
+    fs.writeFileSync('qa_pairs.json',JSON.stringify(qa_pairs,null,2),'utf-8')
+    // console.log('Questions and answers were extracted to qa_pairs.json')
+
 
     
     
     await browser.close()
 
 })()
+
+// module.exports = {qa_pairs}
 
 
 

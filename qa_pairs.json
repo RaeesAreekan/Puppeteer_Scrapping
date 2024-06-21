@@ -1,0 +1,174 @@
+[
+  {
+    "question": "1. What are the differences between Java and JavaScript? ",
+    "answer": "JavaScript is a client-side scripting language and Java is object Oriented Programming language. Both of them are totally different from each other."
+  },
+  {
+    "question": "2. What are JavaScript Data Types? ",
+    "answer": "There are three major Data types in JavaScript.\nPrimitive\nNumbers\nStrings\nBoolean\nSymbol\nNumbers\nStrings\nBoolean\nSymbol\nTrivial\nUndefined\nNull\nUndefined\nNull\nComposite\nObjects\nFunctions\nArrays\nObjects\nFunctions\nArrays"
+  },
+  {
+    "question": "3. Which symbol is used for comments in JavaScript? ",
+    "answer": "Comments prevent the execution of statements. Comments are ignored while the compiler executes the code. There are two type of symbols to represent comments in JavaScript:\nDouble slash: It is known as a single-line comment.\n// Single line comment\n\n\n\nSlash with Asterisk: It is known as a multi-line comment.\n/* \nMulti-line comments\n...\n*/"
+  },
+  {
+    "question": "4. What would be the result of 3+2+”7″?",
+    "answer": "Here, 3 and 2 behave like an integer, and “7” behaves like a string. So 3 plus 2 will be 5. Then the output will be 5+”7″ = 57."
+  },
+  {
+    "question": "5. What is the use of the isNaN function?",
+    "answer": "The number isNan function determines whether the passed value is NaN (Not a number) and is of the type “Number”. In JavaScript, the value NaN is considered a type of number. It returns true if the argument is not a number, else it returns false."
+  },
+  {
+    "question": "6. Which is faster in JavaScript and ASP script?",
+    "answer": "JavaScript is faster compared to ASP Script. JavaScript is a client-side scripting language and does not depend on the server to execute. The ASP script is a server-side scripting language always dependable on the server."
+  },
+  {
+    "question": "7. What is negative infinity?",
+    "answer": "The negative infinity is a constant value represents the lowest available value. It means that no other number is lesser than this value. It can be generate using a self-made function or by an arithmetic operation. JavaScript shows the NEGATIVE_INFINITY value as -Infinity."
+  },
+  {
+    "question": "8. Is it possible to break JavaScript Code into several lines?",
+    "answer": "Yes, it is possible to break the JavaScript code into several lines in a string statement. It can be broken by using the backslash ‘\\’. \nFor example:\ndocument.write(\"A Online Computer Science Portal\\ for Geeks\")\n\nThe code-breaking line is avoid by JavaScript which is not preferable.\nlet gfg= 10, GFG = 5,\nGeeks =\ngfg + GFG;"
+  },
+  {
+    "question": "9. Which company developed JavaScript?",
+    "answer": "Netscape developed JavaScript and was created by Brenden Eich in the year of 1995."
+  },
+  {
+    "question": "10. What are undeclared and undefined variables?",
+    "answer": "Undefined: It occurs when a variable is declare not not assign any value. Undefined is not a keyword.\nUndeclared: It occurs when we try to access any variable which is not initialize or declare earlier using the var or const keyword. If we use ‘typeof’ operator to get the value of an undeclare variable, we will face the runtime error with the return value as “undefined”. The scope of the undeclare variables is always global."
+  },
+  {
+    "question": "11. Write a JavaScript code for adding new elements dynamically. ",
+    "answer": ""
+  },
+  {
+    "question": "12. What are global variables? How are these variables declared, and what are the problems associated with them?",
+    "answer": "In contrast, global variables are the variables that define outside of functions. These variables have a global scope, so they can be used by any function without passing them to the function as parameters. \nExample:"
+  },
+  {
+    "question": "13. What do you mean by NULL in JavaScript?",
+    "answer": "The NULL value represents that no value or no object. It is known as empty value/object."
+  },
+  {
+    "question": "14. How to delete property-specific values?",
+    "answer": "The delete keyword deletes the whole property and all the values at once like\nlet gfg={Course: \"DSA\", Duration:30};\ndelete gfg.Course;"
+  },
+  {
+    "question": "15. What is a prompt box?",
+    "answer": "The prompt box is a dialog box with an optional message prompting the user to input some text. It is often used if the user wants to input a value before entering a page. It returns a string containing the text entered by the user, or null."
+  },
+  {
+    "question": "16. What is the ‘this’ keyword in JavaScript?",
+    "answer": "Functions in JavaScript are essential objects. Like objects, it can be assign to variables, pass to other functions, and return from functions. And much like objects, they have their own properties. ‘this’ stores the current execution context of the JavaScript program. Thus, when it use inside a function, the value of ‘this’ will change depending on how the function is defined, how it is invoked, and the default execution context."
+  },
+  {
+    "question": "17. Explain the working of timers in JavaScript. Also elucidate the drawbacks of using the timer, if any.",
+    "answer": "The timer executes some specific code at a specific time or any small amount of code in repetition to do that you need to use the functions setTimout, setInterval, and clearInterval. If the JavaScript code sets the timer to 2 minutes and when the times are up then the page displays an alert message “times up”. The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds."
+  },
+  {
+    "question": "18. What is the difference between ViewState and SessionState?",
+    "answer": "ViewState: It is specific to a single page in a session.\nSessionState: It is user specific that can access all the data on the web pages."
+  },
+  {
+    "question": "19. How to submit a form using JavaScript?",
+    "answer": "You can use document.form[0].submit() method to submit the form in JavaScript."
+  },
+  {
+    "question": "20. Does JavaScript support automatic type conversion? ",
+    "answer": "Yes, JavaScript supports automatic type conversion."
+  },
+  {
+    "question": "21. What are all the looping structures in JavaScript ?",
+    "answer": "while loop: A while loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition. The while loop can be thought of as a repeating if statement.\nfor loop: A for loop provides a concise way of writing the loop structure. Unlike a while loop, for statement consumes the initialization, condition and increment/decrement in one line thereby providing a shorter, easy to debug structure of looping.\ndo while: A do-while loop is similar to while loop with the only difference that it checks the condition after executing the statements, and therefore is an example of Exit Control Loop."
+  },
+  {
+    "question": "22. How can the style/class of an element be changed?",
+    "answer": "To change the style/class of an element there are two possible ways. We use document.getElementByID method\ndocument.getElementById(\"myText\").style.fontSize = \"16px;\ndocument.getElementById(\"myText\").className = \"class\";"
+  },
+  {
+    "question": "23. Explain how to read and write a file using JavaScript?",
+    "answer": "The readFile() functions is used for reading operation.\nreadFile( Path, Options, Callback)\nThe writeFile() functions is used for writing operation.\nwriteFile( Path, Data, Callback)"
+  },
+  {
+    "question": "24. What is called Variable typing in JavaScript ?",
+    "answer": "The variable typing is the type of variable used to store a number and using that same variable to assign a “string”.\nGeeks = 42;\nGeeks = \"GeeksforGeeks\";"
+  },
+  {
+    "question": "25. How to convert the string of any base to integer in JavaScript?",
+    "answer": "In JavaScript, parseInt() function is used to convert the string to an integer. This function returns an integer of base which is specified in second argument of parseInt() function. The parseInt() function returns Nan (not a number) when the string doesn’t contain number."
+  },
+  {
+    "question": "26. Explain how to detect the operating system on the client machine?",
+    "answer": "To detect the operating system on the client machine, one can simply use navigator.appVersion or navigator.userAgent property. The Navigator appVersion property is a read-only property and it returns the string that represents the version information of the browser."
+  },
+  {
+    "question": "27. What are the types of Pop up boxes available in JavaScript?",
+    "answer": "There are three types of pop boxes available in JavaScript.\nAlert\nConfirm\nPrompt"
+  },
+  {
+    "question": "28. What is the difference between an alert box and a confirmation box?",
+    "answer": "An alert box will display only one button which is the OK button. It is used to inform the user about the agreement has to agree. But a Confirmation box displays two buttons OK and cancel, where the user can decide to agree or not."
+  },
+  {
+    "question": "29. What is the disadvantage of using innerHTML in JavaScript?",
+    "answer": "There are lots of disadvantages of using the innerHTML in JavaScript as the content will replace everywhere. If you use += like “innerHTML = innerHTML + ‘html’” still the old content is replaced by HTML. It preserves event handlers attached to any DOM elements."
+  },
+  {
+    "question": "30. What is the use of void(0) ?",
+    "answer": "The void(0) is used to call another method without refreshing the page during the calling time parameter “zero” will be passed."
+  },
+  {
+    "question": "31. What is the ‘Strict’ mode in JavaScript and how can it be enabled?",
+    "answer": "Strict Mode is a new feature in ECMAScript 5 that allows you to place a program or a function in a “strict” operating context. This strict context prevents certain actions from being taken and throws more exceptions. The statement “use strict” instructs the browser to use the Strict mode, which is a reduced and safer feature set of JavaScript."
+  },
+  {
+    "question": "32. How to get the status of a CheckBox?",
+    "answer": "The DOM Input Checkbox Property is used to set or return the checked status of a checkbox field. This property is used to reflect the HTML Checked attribute.\ndocument.getElementById(\"GFG\").checked;\nIf the CheckBox is checked then it returns True."
+  },
+  {
+    "question": "33. How to explain closures in JavaScript and when to use it?",
+    "answer": "The closure is created when a child functions to keep the environment of the parent’s scope even after the parent’s function has already executed. The Closure is a locally declared variable related to a function. The closure will provide better control over the code when using them."
+  },
+  {
+    "question": "34. What is the difference between call() and apply() methods ?",
+    "answer": "Both methods are used in a different situation\ncall() Method: It calls the method, taking the owner object as argument. The keyword this refers to the ‘owner’ of the function or the object it belongs to. We can call a method that can be used on different objects.\napply() Method: The apply() method is used to write methods, which can be used on different objects. It is different from the function call() because it takes arguments as an array."
+  },
+  {
+    "question": "35. How to target a particular frame from a hyperlink in JavaScript ?",
+    "answer": "This can be done by using the target attribute in the hyperlink. Like\n<a href=\"/geeksforgeeks.htm\" target=\"newframe\">New Page</a>"
+  },
+  {
+    "question": "36. Write the errors shown in JavaScript?",
+    "answer": "There are three different types of errors in JavaScript.\nSyntax error: A syntax error is an error in the syntax of a sequence of characters or tokens that are intended to be written in a particular programming language.\nLogical error: It is the most difficult error to be traced as it is the error on the logical part of the coding or logical error is a bug in a program that causes to operate incorrectly and terminate abnormally.\nRuntime Error: A runtime error is an error that occurs during the running of the program, also known as an exception."
+  },
+  {
+    "question": "37. What is the difference between JavaScript and Jscript?",
+    "answer": "JavaScript"
+  },
+  {
+    "question": "38. What does var myArray = [[]]; statement declares? ",
+    "answer": "In JavaScript, this statement is used to declare a two-dimensional array."
+  },
+  {
+    "question": "39. How many ways an HTML element can be accessed in JavaScript code? ",
+    "answer": "There are four possible ways to access HTML elements in JavaScript which are:\ngetElementById() Method: It is used to get the element by its id name.\ngetElementsByClass() Method: It is used to get all the elements that have the given classname.\ngetElementsByTagName() Method: It is used to get all the elements that have the given tag name.\nquerySelector() Method: This function takes CSS style selector and returns the first selected element."
+  },
+  {
+    "question": "40. What is the difference between innerHTML & innerText? ",
+    "answer": "The innerText property sets or returns the text content as plain text of the specified node, and all its descendants whereas the innerHTML property sets or returns the plain text or HTML contents in the elements. Unlike innerText, inner HTML lets you work with HTML rich text and doesn’t automatically encode and decode text."
+  },
+  {
+    "question": "41. What is an event bubbling in JavaScript?",
+    "answer": "Consider a situation an element is present inside another element and both of them handle an event. When an event occurs in bubbling, the innermost element handles the event first, then the outer, and so on."
+  },
+  {
+    "question": "Please Login to comment...",
+    "answer": ""
+  },
+  {
+    "question": "Similar Reads",
+    "answer": ""
+  }
+]
